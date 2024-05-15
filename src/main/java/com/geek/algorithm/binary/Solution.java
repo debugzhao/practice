@@ -12,7 +12,7 @@ public class Solution {
     }
 
     /**
-     * 左闭右闭区间
+     * 左闭右闭区间写法 [1, 9]
      */
     public int search(int[] nums, int target) {
         int left = 0;
@@ -21,6 +21,26 @@ public class Solution {
             int middle = (left + right) / 2;
             if (nums[middle] > target) {
                 right = middle - 1;
+            } else if (nums[middle] < target) {
+                left = middle + 1;
+            } else {
+                return middle;
+            }
+        }
+        return -1;
+    }
+
+
+    /**
+     * 左闭右开区间写法 [1, 9)
+     */
+    public int search1(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length;
+        while (left < right) {
+            int middle = (left + right) / 2;
+            if (nums[middle] > target) {
+                right = middle;
             } else if (nums[middle] < target) {
                 left = middle + 1;
             } else {
