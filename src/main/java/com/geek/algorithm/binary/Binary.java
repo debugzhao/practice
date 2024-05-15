@@ -5,8 +5,9 @@ package com.geek.algorithm.binary;
  * @Date 2024/05/15 23:18
  * @Email zhaojingchao@joysuch.com
  * @Desc 数组二分查找 https://leetcode.cn/problems/binary-search/
+ * https://www.bilibili.com/video/BV1fA4y1o715/?spm_id_from=333.788&vd_source=f3478dde6c64ccf1e4a7d6ed91877d4b
  */
-public class Solution {
+public class Binary {
     public static void main(String[] args) {
 
     }
