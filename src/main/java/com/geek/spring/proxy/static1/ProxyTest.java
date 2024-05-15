@@ -7,7 +7,7 @@ import com.geek.spring.proxy.PayServiceImpl;
  * @Author zhaojingchao
  * @Date 2024/05/15 14:37
  * @Email zhaojingchao@joysuch.com
- * @Desc
+ * @Desc 静态代理测试
  */
 public class ProxyTest {
     public static void main(String[] args) {
