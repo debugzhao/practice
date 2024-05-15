@@ -1,4 +1,4 @@
-package com.geek.algorithm.binary;
+package com.geek.algorithm.array;
 
 /**
  * @Author zhaojingchao
