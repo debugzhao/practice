@@ -21,6 +21,7 @@ public class DeadLock {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
+                System.out.println(Thread.currentThread() + "：等待获取B锁");
                 synchronized (lockB) {
                     System.out.println(Thread.currentThread().getName() + "：持有B锁");
                 }
@@ -28,16 +29,16 @@ public class DeadLock {
         }).start();
 
         new Thread(() -> {
-            synchronized (lockA) {
-                System.out.println(Thread.currentThread() + "get resource1");
+            synchronized (lockB) {
+                System.out.println(Thread.currentThread() + "：持有B锁");
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(Thread.currentThread() + "waiting get resource2");
-                synchronized (lockB) {
-                    System.out.println(Thread.currentThread() + "get resource2");
+                System.out.println(Thread.currentThread() + "：等待获取A锁");
+                synchronized (lockA) {
+                    System.out.println(Thread.currentThread() + "：持有A锁");
                 }
             }
         }, "线程 2").start();
