@@ -13,23 +13,21 @@ import java.util.Enumeration;
  */
 public class BubbleSort {
     public static void main(String[] args) {
-        int count = 0;
         int[] nums = new int[] {6, 5, 4, 3, 2, 1};
+        bubbleSort(nums);
+        System.out.println(Arrays.toString(nums));
+    }
 
-        // i表示每次循环要比较的次数，
-        for (int i = nums.length -1 ; i > 0; i--) {
-            System.out.println(i);
+    public static void bubbleSort(int[] nums) {
+        for(int i = nums.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                count ++;
                 if (nums[j] > nums[j + 1]) {
+                    // 交换元素
                     int temp = nums[j];
                     nums[j] = nums[j + 1];
                     nums[j + 1] = temp;
                 }
             }
         }
-        System.out.println(Arrays.toString(nums));
-        System.out.println("循环次数：" + count);
     }
-
 }

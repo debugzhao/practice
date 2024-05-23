@@ -1,5 +1,6 @@
 package com.geek.algorithm.sort;
 
+import javax.management.MBeanRegistration;
 import java.util.Arrays;
 
 /**
@@ -15,10 +16,14 @@ import java.util.Arrays;
 public class InsertionSort {
     public static void main(String[] args) {
         int[] nums = new int[] {6, 5, 4, 3, 2, 1};
+        insertionSort(nums);
+        System.out.println(Arrays.toString(nums));
+    }
+
+    public static void insertionSort(int[] nums) {
         for (int i = 1; i < nums.length; i++) {
-            for (int j = i; j > 0; j--) {
+            for (int j = i; j > 0 ; j--) {
                 if (nums[j] < nums[j - 1]) {
-                    // 交换元素位置
                     int temp = nums[j];
                     nums[j] = nums[j - 1];
                     nums[j - 1] = temp;
@@ -27,6 +32,5 @@ public class InsertionSort {
                 }
             }
         }
-        System.out.println(Arrays.toString(nums));
     }
 }
