@@ -1,7 +1,6 @@
 package com.geek.spring.proxy.cglib;
 
 
-import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
