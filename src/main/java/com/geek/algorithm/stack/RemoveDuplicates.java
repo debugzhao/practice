@@ -18,7 +18,7 @@ public class RemoveDuplicates {
         int top = -1;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (top >= 0 || result.charAt(top) == c) {
+            if (top >= 0 && result.charAt(top) == c) {
                 result.deleteCharAt(top);
                 top--;
             } else {
