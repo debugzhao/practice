@@ -1,11 +1,5 @@
 package com.geek.algorithm.tree;
 
-/**
- * @author lucas.zhao
- * @date 2023/08/02 11:38
- * @email jczhao_cs@163.com
- */
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
