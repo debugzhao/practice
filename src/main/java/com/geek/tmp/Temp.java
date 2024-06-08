@@ -16,10 +16,8 @@ import java.util.Objects;
 
 public class Temp {
     public static void main(String[] args) {
-        HashSet<String> strings = new HashSet<>();
-        strings.add("1");
-        strings.add("1");
-        strings.add("2");
-        System.out.println(strings);
+        HashMap<String, String> map = new HashMap<>();
+        map.put(null, null);
+        System.out.println(map);
     }
 }
