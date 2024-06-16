@@ -9,7 +9,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author lucas.zhao
  * @date 2023/09/06 15:35
  * @email jczhao_cs@163.com
- * 等待通知机制实现两个线程交替打印奇数/偶数
+ * 通过Condition条件通知机制实现线程调度
+ * https://juejin.cn/post/7028225425578917896
  */
 public class AlternatePrintingByCondition {
 
