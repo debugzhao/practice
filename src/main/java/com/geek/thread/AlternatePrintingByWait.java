@@ -4,9 +4,9 @@ package com.geek.thread;
  * @author lucas.zhao
  * @date 2023/09/06 15:35
  * @email jczhao_cs@163.com
- * 两个线程交替打印数字
+ * 等待通知机制实现两个线程交替打印奇数/偶数
  */
-public class AlternatePrinting {
+public class AlternatePrintingByWait {
     private static final Object lock = new Object();
     private static int count = 1;
     private static final int max = 100;

@@ -4,6 +4,7 @@ package com.geek.thread;
  * @author lucas.zhao
  * @date 2023/09/06 15:50
  * @email jczhao_cs@163.com
+ * 线程礼让机制实现两个线程交替打印奇数/偶数
  */
 public class AlternatePrintingByYield {
     private static final Object lock = new Object();
