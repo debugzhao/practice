@@ -17,7 +17,8 @@ public class AlternatePrintingByWait {
             while (count <= max) {
                 synchronized (lock) {
                     if (count % 2 ==1) {
-                        System.out.println(Thread.currentThread().getName() + ": " + count);
+                        // System.out.println(Thread.currentThread().getName() + ": " + count);
+                        System.out.println(Thread.currentThread().getName() + ": " + "A");
                         count ++;
                         lock.notify();
                     } else {
@@ -29,14 +30,15 @@ public class AlternatePrintingByWait {
                     }
                 }
             }
-        });
+        }, "Thread-1");
 
         // thread2 打印偶数数字
         Thread thread2 = new Thread(() -> {
             while (count <= max) {
                 synchronized (lock) {
                     if (count % 2 == 0) {
-                        System.out.println(Thread.currentThread().getName() + ": " + count);
+                        // System.out.println(Thread.currentThread().getName() + ": " + count);
+                        System.out.println(Thread.currentThread().getName() + ": " + "B");
                         count ++;
                         lock.notify();
                     } else {
@@ -48,7 +50,7 @@ public class AlternatePrintingByWait {
                     }
                 }
             }
-        });
+        }, "Thread-2");
 
         // 启动两个子线程
         thread1.start();
