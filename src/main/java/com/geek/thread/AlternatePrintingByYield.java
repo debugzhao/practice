@@ -16,11 +16,11 @@ public class AlternatePrintingByYield {
             while (count < max) {
                 synchronized (lock) {
                     if (count % 2 == 1) {
-                         System.out.println(Thread.currentThread().getName() + ": " + count);
+                        System.out.println(Thread.currentThread().getName() + ": " + count);
                         count ++;
                     }
-                    Thread.yield();
                 }
+                Thread.yield();
             }
         });
 
@@ -32,8 +32,8 @@ public class AlternatePrintingByYield {
                          System.out.println(Thread.currentThread().getName() + ": " + count);
                         count ++;
                     }
-                    Thread.yield();
                 }
+                Thread.yield();
             }
         });
 
